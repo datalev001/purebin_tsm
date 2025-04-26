@@ -1,1 +1,6 @@
-# purebin_tsm
+# Hybrid Attention for Binary Sequence Forecasting
+Combining n-Gram Embeddings, Count-Aware Self-Attention, and Recency-Weighted ARMA for Multi-Horizon Distributional Predictions
+I tackle pure binary time series forecasting by converting complex signals into 0/1 patterns - stock up/down, buy/not-buy, gene on/off - to strip out noise and reveal genuine shifts. Forecasting these sequences lets me detect market regimes, flag customer churn, and model gene-activation pathways.
+My approach fuses symbolic n-gram motifs, count-aware self-attention, and recency-weighted statistics into one neural network. That hybrid lets me learn both precise short-term patterns and long-range interactions without juggling separate modules.
+I call this model BinaryTrendFormer: a single, multi-task framework that predicts next-step up/down probability and the full K-step count distribution. I benchmark it using point metrics (log-loss, AUROC) and distributional scores (RPS, interval coverage), then compare my learned uncertainty intervals against simple CLT bounds.
+The result is a concise, plug-and-play solution I can apply to any binary forecasting challenge - whether I'm modeling financial trends, customer journeys, gene switches, or sensor event streams.
